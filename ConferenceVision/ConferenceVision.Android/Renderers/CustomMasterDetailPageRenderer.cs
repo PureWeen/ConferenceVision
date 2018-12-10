@@ -29,7 +29,7 @@ namespace ConferenceVision.Droid.Renderers
 
                 for (var i = 0; i < toolbar.ChildCount; i++)
                 {
-                    var imageButton = toolbar.GetChildAt(i) as ImageButton;
+                    var imageButton = toolbar.GetChildAt(i) as global::Android.Widget.ImageButton;
                     var drawerArrow = imageButton?.Drawable as DrawerArrowDrawable;
                     if (drawerArrow == null)
                         continue;
@@ -48,7 +48,7 @@ namespace ConferenceVision.Droid.Renderers
             }
         }
 
-        private void ChangeIcon(ImageButton imageButton, int id)
+        private void ChangeIcon(Android.Widget.ImageButton imageButton, int id)
         {
             if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop)
                 imageButton.SetImageDrawable(Context.GetDrawable(id));
